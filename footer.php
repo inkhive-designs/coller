@@ -18,10 +18,8 @@
 				<?php printf( __( 'Coller Theme by %1$s.', 'coller' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="nofollow">Rohit</a>' ); ?>
 				
 			</div><!-- .site-info -->
-			
-			<div id="footer-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
-			</div>
+
+            <?php get_template_part('modules/navigation/menu','footer'); ?>
 		</div>
 	</footer><!-- #colophon -->
 	

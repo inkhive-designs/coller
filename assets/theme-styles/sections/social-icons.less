@@ -1,0 +1,28 @@
+#masthead {
+  .social-icons {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: 45px;
+    @media screen and (max-width: 767px) {
+      float: none;
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+  }
+  .social-icons a {
+    margin-right: 3px;
+    text-align: center;
+    img {
+      width: 40px;
+      height: 40px;
+      .transition(ease 0.4s);
+    }
+    &:hover {
+      img {
+        .transform(scale(1.05) rotate(360deg));
+      }
+    }
+  }
+}
