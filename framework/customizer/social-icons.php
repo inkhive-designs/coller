@@ -18,7 +18,35 @@ $social_networks = array( //Redefinied in Sanitization Function.
     'youtube' => __('Youtube','coller'),
     'flickr' => __('Flickr','coller'),
 );
+//social icons style
+    $social_style = array(
+        'coller-default'  => __('Default', 'coller'),
+        'style1'   => __('Style 1', 'coller'),
+        'style2'   => __('Style 2', 'coller'),
 
+
+    );
+    $wp_customize->add_setting(
+        'coller_social_icon_style_set', array(
+        'sanitize_callback' => 'coller_sanitize_social_style',
+        'default' => 'coller-default'
+    ));
+
+    function coller_sanitize_social_style( $input ) {
+        if ( in_array($input, array('coller-default','style1','style2') ) )
+            return $input;
+        else
+            return '';
+    }
+
+    $wp_customize->add_control( 'coller_social_icon_style_set', array(
+        'setting' => 'coller_social_icon_style_set',
+        'label' => __('Social Icon Style ','coller'),
+        'description' => __('You can choose your icon style','coller'),
+        'section' => 'coller_social_section',
+        'type' => 'select',
+        'choices' => $social_style,
+    ));
 $social_count = count($social_networks);
 
 for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
@@ -30,7 +58,7 @@ for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
     ));
 
     $wp_customize->add_control( 'coller_social_'.$x, array(
-        'settings' => 'coller_social_'.$x,
+        'setting' => 'coller_social_'.$x,
         'label' => __('Icon ','coller').$x,
         'section' => 'coller_social_section',
         'type' => 'select',
@@ -43,7 +71,7 @@ for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
     ));
 
     $wp_customize->add_control( 'coller_social_url'.$x, array(
-        'settings' => 'coller_social_url'.$x,
+        'setting' => 'coller_social_url'.$x,
         'description' => __('Icon ','coller').$x.__(' Url','coller'),
         'section' => 'coller_social_section',
         'type' => 'url',

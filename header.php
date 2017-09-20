@@ -22,7 +22,8 @@
 	<?php get_template_part('slider', 'nivo' ); ?>
 	
 	<div class="mega-container">
-		<?php get_template_part('featured', 'showcase' ); ?>
+		<?php get_template_part('framework/featured-components/featured', 'square' ); ?>
+        <?php get_template_part('framework/featured-components/featured', 'root' ); ?>
 		<?php get_template_part('featured', 'posts' ); ?>
 		<?php get_template_part('featured', 'content2'); ?>
 		<?php get_template_part('featured', 'content1'); ?>

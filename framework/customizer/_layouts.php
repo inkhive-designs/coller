@@ -26,7 +26,7 @@ function coller_customize_register_layouts( $wp_customize )
 
     function coller_sanitize_blog_layout($input)
     {
-        if (in_array($input, array('grid', 'grid_2_column', 'grid_3_column', 'coller')))
+        if (in_array($input, array('grid', 'grid_2_column', 'grid_3_column', 'coller','coller_club','coller_flat')))
             return $input;
         else
             return '';
@@ -41,6 +41,8 @@ function coller_customize_register_layouts( $wp_customize )
             'choices' => array(
                 'coller' => __('Coller Theme Layout', 'coller'),
                 'coller_flat' => __('Coller Flattened', 'coller'),
+                'coller_club' => __('Coller Club', 'coller'),
+
             )
         )
     );

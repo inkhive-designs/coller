@@ -78,6 +78,7 @@ if ( ! function_exists( 'coller_setup' ) ) :
         ) ) );
 
         add_image_size('coller-default-thumb',542, 442, true ); //replaces klopp-featposts-thumb
+        add_image_size('coller-club-thumb',183, 250, true );
     }
 endif; // coller_setup
 add_action( 'after_setup_theme', 'coller_setup' );

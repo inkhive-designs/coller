@@ -1,5 +1,11 @@
 ChangeLog
 =========
+Version 2.0.2
+    i) Switched to new framework.
+    ii) Added 2 featured posts area section.
+    iii) Added 3 social icons.
+    iv) Added new blog layout calles coller club.
+    v) bug fixed.
 
 Version 2.0.1
 
