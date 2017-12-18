@@ -41,8 +41,10 @@
     top:0;
     transform-style: preserve-3d;
     transition: all 0.6s linear;
+    @media screen and (min-width: 767px){
     &:hover{
       transform: rotateY(180deg);
+    }
     }
   }
   .face {
@@ -50,11 +52,17 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-   // transform-style: preserve-3d;
-    //transition: all 1.0s linear;
-    &:hover{
-      //transform: rotateY(180deg);
-    }
+    @media screen and (max-width: 767px){
+   &:before{
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+   }
+  }
   }
   .face.back{
     position: absolute;
@@ -90,4 +98,25 @@
     #f1_card {
       margin-bottom: 40px !important;
     }
+  }
+  @media screen and (min-width: 767px)  {
+    .mobile-screen{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px)  {
+    .mobile-screen{
+      h2{
+        font-size: 18px !important;
+      }
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      transform: translateY(50%);
+      color: @onaccent;
+      padding: 0px 20px;
+    }
+
   }

@@ -106,7 +106,7 @@ function coller_posted_on_date() {
 	);
 	
 	$posted_on = sprintf(
-		_x( '%s', 'post date', 'coller' ),
+		__( '%s'),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -206,7 +206,7 @@ function coller_comment( $comment, $args, $depth ) {
 					<?php printf( '%s', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s', '1: date', 'coller' ), get_comment_date() ); ?>
+							<?php printf( __( '%1$s'), get_comment_date() ); ?>
 						</time>
 					</a>
 				</div><!-- .comment-metadata -->

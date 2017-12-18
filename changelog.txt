@@ -1,5 +1,11 @@
 ChangeLog
 =========
+
+Version 2.0.3
+    i) Header Image bug fixed.
+    ii) Featured Areas bug fixed.
+    iii) Coller Club blog layout bug fixed.
+
 Version 2.0.2
     i) Switched to new framework.
     ii) Added 2 featured posts area section.

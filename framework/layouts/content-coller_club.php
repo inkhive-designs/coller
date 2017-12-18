@@ -14,7 +14,9 @@
                         <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
                     <?php endif; ?>
                 </div><!--.featured-thumb-->
-                <span class="readmore"><a href="<?php the_permalink() ?>"><?php _e('Read More','coller'); ?></a></span>
+                <a href="<?php the_permalink() ?>">
+                    <span class="readmore"><?php _e('Read More','coller'); ?></span>
+                </a>
             </div>
 
 

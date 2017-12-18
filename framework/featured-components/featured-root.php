@@ -24,6 +24,9 @@
                             <?php else : ?>
                                 <div title="<?php the_title_attribute() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></div>
                             <?php endif; ?>
+                            <div class="mobile-screen">
+                                <h2><?php the_title(); ?></h2>
+                            </div>
                         </div>
                         <div class="back face center">
                             <h2><?php the_title(); ?></h2>
