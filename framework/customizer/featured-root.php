@@ -7,7 +7,7 @@ function coller_customize_register_root( $wp_customize )
         'priority' => 40,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Featured Posts Area', 'coller'),
+        'title' => __('Featured Content Areas', 'coller'),
         'description' => '',
     ));
 //farea 1 start

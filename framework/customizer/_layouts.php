@@ -1,7 +1,9 @@
 <?php
 // Layout and Design
-function coller_customize_register_layouts( $wp_customize )
-{
+function coller_customize_register_layouts( $wp_customize ) {
+    $wp_customize->get_section('background_image')->panel = 'coller_design_panel';
+    $wp_customize->get_section('colors')->panel = 'coller_design_panel';
+
     $wp_customize->add_panel('coller_design_panel', array(
         'priority' => 40,
         'capability' => 'edit_theme_options',
@@ -152,40 +154,6 @@ function coller_customize_register_layouts( $wp_customize )
             </label>
             <?php
         }
-    }
-
-    $wp_customize->add_section(
-        'coller_custom_codes',
-        array(
-            'title' => __('Custom CSS', 'coller'),
-            'description' => __('Enter your Custom CSS to Modify design.', 'coller'),
-            'priority' => 11,
-            'panel' => 'coller_design_panel'
-        )
-    );
-
-    $wp_customize->add_setting(
-        'coller_custom_css',
-        array(
-            'default' => '',
-            'sanitize_callback' => 'coller_sanitize_text'
-        )
-    );
-
-    $wp_customize->add_control(
-        new Coller_Custom_CSS_Control(
-            $wp_customize,
-            'coller_custom_css',
-            array(
-                'section' => 'coller_custom_codes',
-                'settings' => 'coller_custom_css'
-            )
-        )
-    );
-
-    function coller_sanitize_text($input)
-    {
-        return wp_kses_post(force_balance_tags($input));
     }
 
     $wp_customize->add_section(

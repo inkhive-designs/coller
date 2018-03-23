@@ -19,7 +19,7 @@
 
     <?php get_template_part('modules/navigation/menu','primary'); ?>
 	
-	<?php get_template_part('slider', 'nivo' ); ?>
+	<?php get_template_part('framework/featured-components/slider', 'nivo' ); ?>
 	
 	<div class="mega-container">
 		<?php get_template_part('framework/featured-components/featured', 'square' ); ?>

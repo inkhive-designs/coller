@@ -53,7 +53,6 @@ $wp_customize->add_control(
 ) );
 
 $wp_customize->add_setting( 'coller_himg_repeat' , array(
-    'default'     => true,
     'sanitize_callback' => 'coller_sanitize_checkbox'
 ) );
 

@@ -10,9 +10,12 @@
 </div><!--.mega-container-->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+<?php get_sidebar('footer'); ?>
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<div class="site-info">
+			<div class="site-info col-md-4 col-sm-4 col-xs-12">
 				<?php echo ( get_theme_mod('coller_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','coller')) : get_theme_mod('coller_footer_text'); ?>
 				<span class="sep"></span>
 				<?php printf( __( 'Coller Theme by %1$s.', 'coller' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="nofollow">Rohit</a>' ); ?>

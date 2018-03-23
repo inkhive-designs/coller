@@ -7,6 +7,8 @@
         else :
             $walker = new Coller_Menu_With_Icon;
         endif;
+
+        if (!has_nav_menu('primary')) { $walker = ''; }
         //Display the Menu.
         wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>
     </div>

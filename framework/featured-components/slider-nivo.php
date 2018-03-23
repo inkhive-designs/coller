@@ -40,8 +40,12 @@ if ( get_theme_mod('coller_main_slider_enable' ) && is_front_page() ) :
 							?>
 				            <div id="caption_<?php echo $i ?>" class="nivo-html-caption">
 				                <a href="<?php echo $url ?>">
+                                    <?php if($title): ?>
 					                <div class="slide-title"><?php echo $title ?></div>
+                                    <?php endif; ?>
+                                    <?php if($desc) : ?>
 					                <div class="slide-desc"><span><?php echo $desc ?></span></div>
+                                    <?php endif; ?>
 					                <?php if ($button != "") { ?><div class="slide-cta"><span><?php echo $button ?></span></div><?php } ?>
 				                </a>
 				            </div>

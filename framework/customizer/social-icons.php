@@ -4,6 +4,7 @@ function coller_customize_register_social( $wp_customize ) {
 $wp_customize->add_section('coller_social_section', array(
     'title' => __('Social Icons','coller'),
     'priority' => 44 ,
+    'panel' => 'coller_header_panel'
 ));
 
 $social_networks = array( //Redefinied in Sanitization Function.

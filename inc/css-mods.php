@@ -29,60 +29,22 @@ function coller_custom_css_mods() {
 	if (  get_theme_mod('coller_branding_below_logo') ) :
 		echo "#masthead #text-title-desc { display: block; clear: both; } ";		
 	endif;
-	
-	//If Logo is Centered
-	if ( get_theme_mod('coller_center_logo') ) :
-		
-		echo "#masthead #text-title-desc, #masthead #site-logo { float: none; } .site-branding { text-align: center; } #text-title-desc { display: inline-block; }";
-		
-	endif;
-	
-	//Exception: When Logo is Centered, and Title Not Set to display in next line.
-	if ( get_theme_mod('coller_center_logo') && !get_theme_mod('coller_branding_below_logo') ) :
-		echo ".site-branding #text-title-desc { text-align: left; }";
-	endif;
-	
-	//Exception: When Logo is centered, but there is no logo.
-	if ( get_theme_mod('coller_center_logo') && !get_theme_mod('coller_logo') ) :
-		echo ".site-branding #text-title-desc { text-align: center; }";
-	endif;
-	
-	//Exception: IMage transform origin should be left on Left Alignment, i.e. Default
-	if ( !get_theme_mod('coller_center_logo') ) :
-		echo "#masthead #site-logo img { transform-origin: left; }";
-	endif;	
-	
-	
-	//Modify Menu bars, if header image has been set
-	if ( get_header_image() ) :
-		//echo "#site-navigation { background: ".coller_fade("#f4f4f4", 0.9)."; }";
-	endif;
 		
 	if ( get_theme_mod('coller_site_titlecolor') ) :
-		echo ".site-title a { color: ".get_theme_mod('coller_site_titlecolor', '#e10d0d')."; }";
+		echo "h1.site-title a { color: ".get_theme_mod('coller_site_titlecolor', '#e10d0d')." !important; }";
 	endif;
 	
 	
 	if ( get_theme_mod('coller_header_desccolor','#777') ) :
-		echo ".site-description { color: ".get_theme_mod('coller_header_desccolor','#777')."; }";
+		echo "h2.site-description { color: ".get_theme_mod('coller_header_desccolor','#777')." !important; }";
 	endif;
 	
 	//For BG Color
 	echo ".mega-container { background: #".get_background_color()."; }";
 	
-	if ( get_theme_mod('coller_custom_css') ) :
-		echo  get_theme_mod('coller_custom_css');
-	endif;
-	
-	
 	if ( get_theme_mod('coller_hide_title_tagline') ) :
 		echo "#masthead .site-branding #text-title-desc { display: none; }";
 	endif;
-	
-	if ( get_theme_mod('coller_logo_resize') ) :
-		$val = get_theme_mod('coller_logo_resize')/100;
-		echo "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
-		endif;
 
 	echo "</style>";
 }
