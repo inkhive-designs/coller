@@ -23,7 +23,10 @@ function coller_customize_register_layouts( $wp_customize ) {
 
     $wp_customize->add_setting(
         'coller_blog_layout',
-        array('sanitize_callback' => 'coller_sanitize_blog_layout')
+        array(
+            'sanitize_callback' => 'coller_sanitize_blog_layout',
+            'default'   => 'grid'
+        )
     );
 
     function coller_sanitize_blog_layout($input)

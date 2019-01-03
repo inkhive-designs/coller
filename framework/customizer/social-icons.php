@@ -14,8 +14,7 @@ $social_networks = array( //Redefinied in Sanitization Function.
     'google-plus' => __('Google Plus','coller'),
     'instagram' => __('Instagram','coller'),
     'rss' => __('RSS Feeds','coller'),
-    'vine' => __('Vine','coller'),
-    'vimeo-square' => __('Vimeo','coller'),
+    'vimeo' => __('Vimeo','coller'),
     'youtube' => __('Youtube','coller'),
     'flickr' => __('Flickr','coller'),
 );
@@ -89,8 +88,7 @@ function coller_sanitize_social( $input ) {
         'google-plus',
         'instagram',
         'rss',
-        'vine',
-        'vimeo-square',
+        'vimeo',
         'youtube',
         'flickr'
     );

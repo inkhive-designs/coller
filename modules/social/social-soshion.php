@@ -4,7 +4,7 @@
 */
 $social_style = get_theme_mod('coller_social_icon_style_set','coller-default');
 //var_dump($social_style);
-for ($i = 1; $i < 8; $i++) : 
+for ($i = 1; $i <= 6; $i++) :
 	$social = get_theme_mod('coller_social_'.$i);
 	if ( ($social != 'none') && ($social != '') ) : ?>
 	<a href="<?php echo esc_url( get_theme_mod('coller_social_url'.$i) ); ?>">
